@@ -1,0 +1,77 @@
+.wrapper{
+  display: grid;
+  place-items: center;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vh;
+  height: 5vh;
+}
+
+.addButton{
+  margin: 13px 0 0 0;
+  justify-content: center;
+  align-items: center;
+  position: center;
+  height: 30px;
+  width: 30px;
+}
+
+.form{
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  align-items: center;
+
+}
+
+.customField{
+  position: relative;
+  font-size: 14px;
+  padding-top: 20px;
+  margin-bottom: 5px;
+}
+
+.customField input{
+  margin-right: 15px;
+  border: none;
+  width: 600px;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  padding: 12px;
+  font-size: 14px;
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+  background:
+              linear-gradient(90deg, #222, #222) center bottom/0 2px no-repeat,
+              linear-gradient(90deg, #ccc, #ccc) left bottom/100% 2px no-repeat,
+              linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+  transition: background-size .3s ease;
+}
+
+.customField .activity{
+  position: absolute;
+  left: 12px;
+  top: calc(50% + 10px);
+  transform: translateY(-50%);
+  color: #aaa;
+  transition:
+    top 0.3s ease,
+    font-size 0.3s ease,
+    color 0.3s ease;
+}
+
+.customField .addItem:valid + .activity,
+.customField .addItem:focus + .activity{
+  top: 10px;
+  font-size: 10px;
+  color: #222;
+}
+
+.customField input:valid,
+.customField input:focus{
+  background-size: 100% 2px, 100% 2px, 100%;
+}
+
